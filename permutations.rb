@@ -39,3 +39,17 @@ end # Time Complexity : O(n²), Space: O(n) (only because we duped)
 p second_anagram?("gizmo", "sally")    #=> false
 p second_anagram?("elvis", "lives")    #=> true
 p second_anagram?("eliv", "lives")    #=> true
+
+def third_anagram?(str1, str2)
+    str1.split("").sort == str2.split("").sort
+end 
+# Time Complexity: 0(nlogn), Space: 0(n)   
+
+p third_anagram?("eliv", "lives")
+
+def fourth_anagram?(str1, str2)
+    str1.split("").tally == str2.split("").tally
+end 
+
+p fourth_anagram?("elvis", "lives") 
+# Time Complexity: 0(n), Space: 0(n)
